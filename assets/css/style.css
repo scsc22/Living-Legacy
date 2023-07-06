@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, red, black, blue);
+  }
+  
+  main {
+    /* Turns this element into a flexbox */
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    margin-top: 2%;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: stretch;
+    background-color: none;
+    opacity: 0.5;
+
+
+  }
+
+  button:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 251, 4);
+    background-color: rgb(255, 251, 4);
+    color: black;
+    transition: all 0.5s;
+
+  }
+
+
+  .main-header {
+    display: flex;
+    /* Defines how to distribute the empty space between child elements */
+    padding: 60px;
+    background: #f00c0c00;
+    color: #f3f1f1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .nav {
+    display: inline-flex;
+    justify-content: right;
+    flex-wrap: wrap;
+  }
+
+  .Nav.Work {
+    /* A flex-basis of 200px sets the starting width */
+    /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+    flex: 2 0 200px;
+    padding: 10px;
+    text-align: center;
+    border-style: none;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    color: #ffffff; 
+    opacity: 0.8;
+     ;
+  }
+  .Nav.Work:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 251, 4);
+    background-color: rgb(255, 251, 4);
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+
+  }
+
+  .Nav.Contact.Me {
+    /* A flex-basis of 200px sets the starting width */
+    /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+    flex: 2 0 200px;
+    padding: 10px;
+    text-align: center;
+    border-style: none;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  .Nav.Contact.Me:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 251, 4);
+    background-color: rgb(255, 251, 4);
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+  }
+
+  .Nav.Resume {
+    /* A flex-basis of 200px sets the starting width */
+    /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+    flex: 2 0 200px;
+    padding: 10px;
+    text-align: center;
+    border-style: none;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    opacity: 0.8;
+    
+
+  }
+
+  .Nav.Resume:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 251, 4);
+    background-color: rgb(255, 251, 4);
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+  }
+
+  .Nav.About.Me {
+    /* A flex-basis of 200px sets the starting width */
+    /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+    flex: 2 0 200px;
+    padding: 10px;
+    text-align: center;
+    border-style: none;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  .Nav.About.Me:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 251, 4);
+    background-color: rgb(255, 251, 4);
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+  }
+
+  .Work header {
+    padding: 20px;
+    background: #dd0a0a00;
+    color: #030303;
+
+  }
+
+  .Contact.Me header {
+    padding: 20px;
+    background: #dd0a0a00;
+    color: #070707;
+  }
+
+  .Resume header {
+    padding: 20px;
+    background: #dd0a0a00;
+    color: #070707;
+  }
+
+  .About.Me {
+    /* With a flex-grow value of 2, this element grows twice as wide as others */
+    /* The second value, flex-shrink, defines how the element will shrink if it can't fit */
+    flex: 2 1 200px;
+    padding: 20px;
+    background: #dd0a0a00;
+    color: #ffffff;
+    
+  }    
+
+  .article {  
+    display: flex inline-block;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #dd0a0a00;
+    color: #ffffff;
+    justify-content: center;
+
+
+
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 400px;
+    justify-content: center;
+  }
+
+  .button {
+    position: relative;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .button:hover:before {
+    opacity: 1;
+  }
+
+
+  
